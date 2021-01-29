@@ -1,0 +1,16 @@
+respawnOnStart = 0;
+
+class CfgFunctions {
+	class R3D {
+		class FiringRange{
+			class UpClose {file = "FiringRange\UpClose.sqf";};
+			class ShortRange {file = "FiringRange\ShortRange.sqf";};
+			class MediumRange {file = "FiringRange\MediumRange.sqf";};
+			class Cluster {file = "FiringRange\Cluster.sqf";};
+		};
+		class Courses{
+			class ClearingCourse {file = "Courses\ClearingCourse.sqf"; };
+			class OrienteeringCourse {file = "Courses\OrienteeringCourse.sqf";};
+		};
+	};
+};
