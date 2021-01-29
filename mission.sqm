@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=498;
+		nextID=499;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7201.7119,201.39996,10304.694};
-		dir[]={0.5542829,-0.71034926,0.43383956};
-		up[]={0.55938447,0.70384526,0.43783253};
-		aside[]={0.61636716,6.1700121e-008,-0.78748584};
+		pos[]={7535.8667,54.616516,10465.907};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -877,7 +877,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			dataType="Logic";
@@ -10235,20 +10235,38 @@ class Mission
 		class Item36
 		{
 			dataType="Trigger";
-			position[]={4529.063,374.56934,8079.5693};
+			position[]={4529.063,374.56894,8079.5688};
 			class Attributes
 			{
 				condition="call{this}";
 				onActivation="call{{ if (isPlayer _x) then {_x addAction [""Show Markers"", ""call R3D_fnc_ClearingCourse"", true, 10];}; } forEach unit in thisList;}";
 				onDeactivation="call{{ if (isPlayer _x) then {removeAllActions _x;};} forEach unit in thisList;" \n "false call R3D_fnc_ClearingCourse;}";
 				sizeA=193.03;
-				sizeB=257.56366;
+				sizeB=257.564;
 				repeatable=1;
 				activationByOwner="MEMBER";
 			};
 			id=497;
 			type="EmptyDetector";
-			atlOffset=1.3193359;
+			atlOffset=1.3190002;
+		};
+		class Item37
+		{
+			dataType="Trigger";
+			position[]={6153.981,128.73679,8744.29};
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{{ if (isPlayer _x) then {_x addAction [""Show Markers"", ""call R3D_fnc_OrienteeringCourse"", true, 10];}; } forEach unit in thisList;}";
+				onDeactivation="call{{ if (isPlayer _x) then {removeAllActions _x;};} forEach unit in thisList;" \n "false call R3D_fnc_OrienteeringCourse;}";
+				sizeA=632.086;
+				sizeB=654.26202;
+				repeatable=1;
+				activationByOwner="MEMBER";
+			};
+			id=498;
+			type="EmptyDetector";
+			atlOffset=6.0250015;
 		};
 	};
 	class Connections
