@@ -12,5 +12,9 @@ class CfgFunctions {
 			class ClearingCourse {file = "Courses\ClearingCourse.sqf"; };
 			class OrienteeringCourse {file = "Courses\OrienteeringCourse.sqf";};
 		};
+		class MedicalTraining{
+			class SpawnInjured {file = "MedicalTraining\SpawnInjured.sqf";};
+			class SpawnInjuredGroup {file = "MedicalTraining\SpawnInjuredGroup.sqf";};
+		};
 	};
 };

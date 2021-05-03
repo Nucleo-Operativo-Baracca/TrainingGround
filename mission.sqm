@@ -12,11 +12,11 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=528;
+		nextID=543;
 	};
 	class MarkerIDProvider
 	{
-		nextID=42;
+		nextID=43;
 	};
 	class LayerIndexProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6125.7388,490.23633,8584.2852};
-		dir[]={-0.13037905,-0.90610659,0.40245768};
-		up[]={-0.27925175,0.42304948,0.86200207};
-		aside[]={0.9513253,7.4505806e-009,0.30818865};
+		pos[]={7532.9976,56.108025,10504.302};
+		dir[]={0.03795556,-0.93096048,-0.36347106};
+		up[]={0.096681707,0.36530241,-0.92585748};
+		aside[]={-0.99471736,2.5588852e-006,-0.10387012};
 	};
 };
 binarizationWanted=0;
@@ -880,7 +880,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=29;
+		items=34;
 		class Item0
 		{
 			dataType="Logic";
@@ -10350,11 +10350,12 @@ class Mission
 			{
 				text="Clearing Course";
 				condition="call{this}";
-				onActivation="call{{ if (isPlayer _x) then {_x addAction [""Show Markers"", ""call R3D_fnc_ClearingCourse"", true, 10];}; } forEach unit in thisList;}";
-				onDeactivation="call{{ if (isPlayer _x) then {removeAllActions _x;};} forEach unit in thisList;" \n "false call R3D_fnc_ClearingCourse;}";
+				onActivation="call{{_x addAction [""Clearing Course Start"", ""call R3D_fnc_ClearingCourse"", true, 10];} forEach units officersGrp;}";
+				onDeactivation="call{{removeAllActions _x;} forEach units officersGrp;" \n "false call R3D_fnc_ClearingCourse;}";
 				sizeA=193.03;
 				sizeB=257.564;
 				repeatable=1;
+				activationBy="WEST";
 				activationByOwner="MEMBER";
 			};
 			id=497;
@@ -10743,16 +10744,58 @@ class Mission
 			type="EmptyDetectorArea10x10";
 			atlOffset=1.9073486e-006;
 		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={7536.7759,28.951153,10498.904};
+			name="injuredPos2";
+			type="Empty";
+			id=539;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={7536.3379,28.860001,10500.828};
+			name="injuredPos3";
+			type="Empty";
+			id=540;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={7534.2871,28.860001,10500.988};
+			name="injuredPos4";
+			type="Empty";
+			id=541;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={7534.0151,28.948,10498.952};
+			name="injuredPos5";
+			type="Empty";
+			id=542;
+			atlOffset=0.00078201294;
+		};
+		class Item33
+		{
+			dataType="Marker";
+			position[]={7535.4209,28.947001,10498.96};
+			name="injuredPos1";
+			type="Empty";
+			id=530;
+			atlOffset=0.00041770935;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=6;
+			nextID=5;
 		};
 		class Links
 		{
-			items=6;
+			items=5;
 			class Item0
 			{
 				linkID=0;
@@ -10796,16 +10839,6 @@ class Mission
 			class Item4
 			{
 				linkID=4;
-				item0=497;
-				item1=50;
-				class CustomData
-				{
-					type="TriggerOwner";
-				};
-			};
-			class Item5
-			{
-				linkID=5;
 				item0=50;
 				item1=527;
 				class CustomData
