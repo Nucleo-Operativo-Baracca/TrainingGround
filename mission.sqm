@@ -6,9 +6,13 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=513;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=527;
+		nextID=528;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=253;
+		nextID=343;
 	};
 	class Camera
 	{
-		pos[]={7496.8604,57.12505,10579.849};
-		dir[]={0.44161534,-0.62930936,0.63957268};
-		up[]={0.35758501,0.77713555,0.517874};
-		aside[]={0.82293075,2.8374052e-007,-0.56822568};
+		pos[]={6125.7388,490.23633,8584.2852};
+		dir[]={-0.13037905,-0.90610659,0.40245768};
+		up[]={-0.27925175,0.42304948,0.86200207};
+		aside[]={0.9513253,7.4505806e-009,0.30818865};
 	};
 };
 binarizationWanted=0;
@@ -345,6 +349,15 @@ class AddonsMetaData
 		};
 	};
 };
+dlcs[]=
+{
+	"RHS_USAF",
+	"CUP_Weapons",
+	"Heli",
+	"Expansion",
+	"Orange",
+	"Enoch"
+};
 randomSeed=2781899;
 class ScenarioData
 {
@@ -364,7 +377,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -647,7 +660,7 @@ class CustomAttributes
 		};
 		nAttributes=4;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -867,7 +880,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			dataType="Logic";
@@ -4494,8 +4507,7 @@ class Mission
 		class Item13
 		{
 			dataType="Layer";
-			name="Hospital #B";
-			state=1;
+			name="Hospital";
 			class Entities
 			{
 				items=8;
@@ -5773,19 +5785,19 @@ class Mission
 		{
 			dataType="Layer";
 			name="Marker Esame finale corso base";
-			state=1;
 			class Entities
 			{
 				items=10;
 				class Item0
 				{
 					dataType="Marker";
-					position[]={5817.8057,145.09889,8372.3086};
+					position[]={5817.8062,145.099,8372.3086};
 					name="marker_3";
 					text="Corso Base: Esame Finale";
 					type="mil_start";
 					colorName="ColorWEST";
 					id=233;
+					atlOffset=0.00015258789;
 				};
 				class Item1
 				{
@@ -5795,6 +5807,7 @@ class Mission
 					text="Corso Base: Fine Esame";
 					type="mil_pickup";
 					colorName="ColorWEST";
+					alpha=0;
 					id=234;
 					atlOffset=0.00022888184;
 				};
@@ -5806,6 +5819,7 @@ class Mission
 					text="WP1";
 					type="mil_dot";
 					colorName="ColorWEST";
+					alpha=0;
 					id=236;
 				};
 				class Item3
@@ -5816,6 +5830,7 @@ class Mission
 					text="WP2";
 					type="mil_dot";
 					colorName="ColorWEST";
+					alpha=0;
 					id=237;
 					atlOffset=0.00033569336;
 				};
@@ -5827,6 +5842,7 @@ class Mission
 					text="WP3";
 					type="mil_dot";
 					colorName="ColorWEST";
+					alpha=0;
 					id=238;
 					atlOffset=-0.00015258789;
 				};
@@ -5838,6 +5854,7 @@ class Mission
 					text="WP4";
 					type="mil_dot";
 					colorName="ColorWEST";
+					alpha=0;
 					id=239;
 					atlOffset=-2.390976;
 				};
@@ -5849,6 +5866,7 @@ class Mission
 					markerType="ELLIPSE";
 					type="ellipse";
 					colorName="ColorEAST";
+					alpha=0;
 					fillName="FDiagonal";
 					a=282.37378;
 					b=532.52539;
@@ -5863,6 +5881,7 @@ class Mission
 					markerType="ELLIPSE";
 					type="ellipse";
 					colorName="ColorEAST";
+					alpha=0;
 					fillName="FDiagonal";
 					a=303.61499;
 					b=166.25781;
@@ -5877,6 +5896,7 @@ class Mission
 					markerType="ELLIPSE";
 					type="ellipse";
 					colorName="ColorEAST";
+					alpha=0;
 					fillName="FDiagonal";
 					a=173.96558;
 					b=107.40234;
@@ -5886,33 +5906,35 @@ class Mission
 				class Item9
 				{
 					dataType="Marker";
-					position[]={6257.5034,120.16809,8909.4502};
+					position[]={6257.5029,120.168,8909.4502};
 					name="marker_12";
 					type="Faction_INS";
+					alpha=0;
 					a=1.2;
 					id=243;
+					atlOffset=-0.00012207031;
 				};
 			};
 			id=244;
-			atlOffset=21.572823;
+			atlOffset=21.572792;
 		};
 		class Item15
 		{
 			dataType="Layer";
 			name="Marker Corso: Base Clearing";
-			state=1;
 			class Entities
 			{
 				items=13;
 				class Item0
 				{
 					dataType="Marker";
-					position[]={4477.5908,376.10147,8203.9199};
+					position[]={4477.5908,376.10101,8203.9199};
 					name="marker_13";
 					text="Corso Base: Clearing Start";
 					type="mil_start";
 					colorName="ColorWEST";
 					id=245;
+					atlOffset=-0.00045776367;
 				};
 				class Item1
 				{
@@ -10345,13 +10367,15 @@ class Mission
 			position[]={6153.981,128.73679,8744.29};
 			class Attributes
 			{
+				name="OrienteeringCourse";
 				text="Orienteering Course";
 				condition="call{this}";
-				onActivation="call{{ if (isPlayer _x) then {_x addAction [""Show Markers"", ""call R3D_fnc_OrienteeringCourse"", true, 10];}; } forEach unit in thisList;}";
-				onDeactivation="call{{ if (isPlayer _x) then {removeAllActions _x;};} forEach unit in thisList;" \n "false call R3D_fnc_OrienteeringCourse;}";
+				onActivation="call{{_x addAction [""Avvia Corso Finale"", ""true call R3D_fnc_OrienteeringCourse"", true, 10]; } forEach units officersGrp;}";
+				onDeactivation="call{{removeAllActions _x;} forEach units officersGrp;" \n "false call R3D_fnc_OrienteeringCourse;}";
 				sizeA=632.086;
 				sizeB=654.26202;
 				repeatable=1;
+				activationBy="WEST";
 				activationByOwner="MEMBER";
 			};
 			id=498;
@@ -10362,7 +10386,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="CQB Training Zone";
-			state=1;
 			class Entities
 			{
 				items=5;
@@ -10540,7 +10563,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Marker Corso Base Orienteering";
-			state=1;
 			class Entities
 			{
 				items=7;
@@ -10623,6 +10645,7 @@ class Mission
 					text="Corso Base: Orienteering Start";
 					type="mil_start";
 					colorName="ColorWEST";
+					alpha=0;
 					id=522;
 					atlOffset=0.00024414063;
 				};
@@ -10634,7 +10657,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="HQ";
-			state=1;
 			class Entities
 			{
 				items=2;
@@ -10670,7 +10692,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Mechanized Training Ground";
-			state=1;
 			class Entities
 			{
 				items=2;
@@ -10702,6 +10723,25 @@ class Mission
 			};
 			id=526;
 			atlOffset=-2.2056179;
+		};
+		class Item28
+		{
+			dataType="Trigger";
+			position[]={7534.4512,28.961437,10498.781};
+			class Attributes
+			{
+				name="medicalTest";
+				condition="call{this}";
+				sizeA=5;
+				sizeB=5;
+				repeatable=1;
+				activationBy="WEST";
+				activationByOwner="MEMBER";
+				isRectangle=1;
+			};
+			id=527;
+			type="EmptyDetectorArea10x10";
+			atlOffset=1.9073486e-006;
 		};
 	};
 	class Connections
@@ -10766,8 +10806,8 @@ class Mission
 			class Item5
 			{
 				linkID=5;
-				item0=498;
-				item1=50;
+				item0=50;
+				item1=527;
 				class CustomData
 				{
 					type="TriggerOwner";
